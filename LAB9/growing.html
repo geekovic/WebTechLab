@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Practical 9 </title>
+ <style>
+ #text {
+ font-family: Arial, sans-serif;
+ font-size: 10pt; /* Initial font size */
+ }
+ </style>
+</head>
+<body>
+ <h1 id="text">TEXT-GROWING</h1>
+ <script>
+ let fontSize = 10;
+ let growing = true;
+ const textElement = document.getElementById("text");
+ function changeTextSize() {
+ if (growing) {
+ fontSize += 2;
+ textElement.style.color = "red";
+ textElement.textContent = "TEXT-GROWING";
+ } else {
+ fontSize -= 2;
+ textElement.style.color = "blue";
+ textElement.textContent = "TEXT SHRINKING";
+ }
+ if (fontSize >= 50) {
+ growing = false;
+ }
+ if (fontSize <= 5) {
+ clearInterval(interval);
+ }
+ textElement.style.fontSize = fontSize + "pt";
+ }
+ const interval = setInterval(changeTextSize, 100);
+ </script>
+</body>
+</html>
