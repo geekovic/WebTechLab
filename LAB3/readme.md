@@ -1,0 +1,1 @@
+Create a web page using a frame. Divide the page into two parts with navigation links on the left-hand side of the page (width=20%) and the content page on the right-hand side of the page (width=80%). On clicking the navigation links, the corresponding content must be displayed on the righthand side.
